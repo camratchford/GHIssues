@@ -1,0 +1,53 @@
+[project]
+name = "GHIssues"
+requires-python = ">=3.10"
+version = "0.0.1"
+description = "Scripts to view and create Github issues from the CLI"
+readme = "README.md"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: System Administrators",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: MacOS",
+    "Environment :: Console",
+    "Natural Language :: English",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Version Control",
+    "Topic :: Software Development :: Version Control :: Git"
+]
+dependencies = [
+    "markdown-it-py==3.0.0",
+    "mdurl==0.1.2",
+    "Pygments==2.17.2",
+    "rich==13.7.1",
+    "urllib3==2.2.1"
+]
+
+[project.license]
+text = "MIT"
+
+[[project.authors]]
+name = "Cam Ratchford"
+email = "camratchford@gmail.com"
+
+[project.urls]
+Homepage = "https://github.com/camratchford/GHIssues"
+Source = "https://github.com/camratchford/GHIssues"
+
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["gh_issues"]
+
+[project.scripts]
+ghissues-get = "gh_issues:get"
+ghissues-new = "gh_issues:new"
