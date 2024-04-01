@@ -18,7 +18,8 @@ def edit_content(initial_content=""):
         tmpfile.flush()
 
         # Open the preferred editor to edit the temporary file
-        subprocess.call([editor, tmpfile.name])
+        subprocess_opts = [editor, tmpfile.name]
+        subprocess.call(subprocess_opts)
 
         # Move the cursor to the beginning of the file to read its content
         tmpfile.seek(0)

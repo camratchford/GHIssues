@@ -1,8 +1,7 @@
 # Source: https:/github.com/github/gitignore
-build/
-dist/
-tests/ouputs/
-
+extras/build/
+extras/dist/
+extras/*.spec
 
 # For uploading to pypi, contains secrets
 .pypirc
